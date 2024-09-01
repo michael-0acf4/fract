@@ -116,6 +116,7 @@ int main() {
         100 * (float(encoded) - float(original)) / float(original);
 
     std::cout << " Original: " << original << " bytes" << '\n';
+    std::cout << " Block size: " << block * sizeof(char) << " bytes" << '\n';
     std::cout << " Stored as: " << enc.enc << " (" << sizeof(enc.enc)
               << " bytes)" << '\n';
     std::cout << " Encoded: " << encoded << " bytes" << '\n';
@@ -125,7 +126,7 @@ int main() {
     std::cout << " Correct: ";
     if (out.compare(text) != 0) {
       std::cout << "Badly decoded (try (>sizeof(" << STRINGIFY(CONTAINER)
-                << ")) and/or use a smaller block)";
+                << ")) and/or use a bigger block)";
     } else {
       std::cout << "OK";
     }
