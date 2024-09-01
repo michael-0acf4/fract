@@ -1,3 +1,3 @@
 # fract
 
-A (very) basic (inefficient) arithmetic encoder.
+A (very) basic (slightly efficient) arithmetic encoder.
